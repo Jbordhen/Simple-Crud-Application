@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import Loader from '../components/Loader'
 import StyledButton from '../components/StyledButton'
 import StyledLink from '../components/StyledLink'
 import { deletePost } from '../features/postsSlice'
@@ -57,12 +58,7 @@ const PostScreen = ({ match }) => {
       </div>
     )
   }
-  return (
-    <button type='button' class='bg-rose-600' disabled>
-      <svg class='animate-spin h-5 w-5 mr-3' viewBox='0 0 24 24'></svg>
-      Loading
-    </button>
-  )
+  return <Loader />
 }
 
 export default PostScreen

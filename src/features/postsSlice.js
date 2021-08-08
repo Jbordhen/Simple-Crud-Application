@@ -79,7 +79,7 @@ const postsSlice = createSlice({
     [deletePost.fulfilled]: (state, { payload }) => {
       // return list.filter(({ id }) => id !== payload)
       state.list = state.list.filter((item) => item.id !== payload)
-      state.status = 'success'
+      state.status = 'success'   
     },
     [deletePost.rejected]: (state, { payload }) => {
       state.status = 'failed'

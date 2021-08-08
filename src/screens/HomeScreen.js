@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import Loader from '../components/Loader'
 import Post from '../components/Post'
 import StyledLink from '../components/StyledLink'
 import { getPosts } from '../features/postsSlice'
@@ -37,7 +38,7 @@ const HomeScreen = () => {
       </div>
     )
   }
-  return <div className='flex m-auto'>Loading..</div>
+  return <Loader />
 }
 
 export default HomeScreen
