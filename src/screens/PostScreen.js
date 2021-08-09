@@ -16,7 +16,7 @@ const PostScreen = ({ match }) => {
   const handleDelete = (e) => {
     e.preventDefault()
     dispatch(deletePost(post.id))
-    console.log(post.id)
+    // console.log(post.id)
     history.replace('/')
   }
   useEffect(() => {

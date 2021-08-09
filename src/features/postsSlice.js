@@ -22,7 +22,7 @@ export const createPost = createAsyncThunk(
         'https://jsonplaceholder.typicode.com/posts',
         { ...formData }
       )
-      console.log(data)
+      // console.log(data)
       return data
     } catch (error) {
       return error.response && error.response.data.errors
@@ -35,7 +35,7 @@ export const createPost = createAsyncThunk(
 export const deletePost = createAsyncThunk('posts/deletePost', async (id) => {
   try {
     await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
-    console.log(id)
+    // console.log(id)
     return id
   } catch (error) {
     return error.response && error.response.data.errors
